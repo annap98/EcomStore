@@ -1,5 +1,6 @@
 import React from "react";
 
+// About Us page
 const AboutUs = () => {
       return <div className="bg-coolSlate py-96">
 

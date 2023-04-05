@@ -3,19 +3,26 @@ import { SidebarContext } from '../Contexts/SidebarContext';
 import { CartContext } from '../Contexts/CartContext';
 import { BsFillBagFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-//import { FaBars, FaTimes } from "react-icons/fa";
 
+// Navigation Bar component
 const NavBar = () => {
+      
+      // State variable to track if the user has scrolled down the page - currently disabled
       const [isActive, setIsActive] = useState(false);
+      
+      // Conetext variables for the Sidebar and Cart
       const { isOpen, setIsOpen } = useContext(SidebarContext);
       const { itemAmount } = useContext(CartContext);
       //const [nav, setNav] = useState(false);
 
+      // useEffect hook to update the isActive state variable based on the scroll position of the user
       useEffect(() => {
             window.addEventListener('scroll', () => {
                   window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
             });
       });
+
+      // Render NavBar component
       return (
             <header
                   className={`${isActive ? 'bg-coolSlate py-4 shadow-md' : 'bg-coolSlate py-4'
@@ -23,6 +30,7 @@ const NavBar = () => {
             >
                   <div className='container mx-auto flex items-center justify-between h-full bg-coolSlate'>
 
+                        {/** Logo */}
                         <Link to={'/'}>
                               <div>
                                     <h1 className='font-logo text-2xl text-pink'>Vera Natural</h1>
@@ -49,7 +57,8 @@ const NavBar = () => {
                                     </li>
                               </ul>
                         )}*/}
-
+                        
+                        {/** Navigation Links */}
                         <div className='flex items-center space-x-6 ml-auto mr-6'>
                               <Link to={'allclothing'}>
                                     <h1 className='hover:underline underline-purple text-purple font-fontThree'>All Clothing</h1>
@@ -60,6 +69,7 @@ const NavBar = () => {
 
                         </div>
 
+                        {/** Cart */}
                         <div
                               onClick={() => setIsOpen(!isOpen)}
                               className='cursor-pointer flex relative'

@@ -3,17 +3,22 @@ import { useParams } from 'react-router-dom';
 import { CartContext } from '../Contexts/CartContext';
 import { ProductContext } from '../Contexts/ProductContext';
 
+// ProductDetails component - renders product details page
 const ProductDetails = () => {
       
+      // Retrieve  the "id" parameter from the URL
       const { id } = useParams();
+
+      // Retrieve the "products" and "addToCart" functions from the ProductContext and CartContext respectively
       const { products } = useContext(ProductContext);
       const { addToCart } = useContext(CartContext);
 
+      // Find the product with the matching "id"
       const product = products.find((item) => {
             return item.id === parseInt(id);
       });
 
-      
+      // If product is not found, return a loading message
       if (!product) {
             return (
                   <section className='h-screen flex justify-center items-center'>
@@ -22,8 +27,10 @@ const ProductDetails = () => {
             );
       }
 
-      
+      // Extract required information from the product
       const { title, price, description, image } = product;
+
+      // Render the ProductDetails component
       return (
             <section className='pt-32 pb-12 lg:py-32 h-screen flex items-center bg-coolSlate'>
                   <div className='container mx-auto'>

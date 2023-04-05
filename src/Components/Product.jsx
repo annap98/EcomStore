@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom';
 import { BsPlus, BsEyeFill } from 'react-icons/bs';
 import { CartContext } from '../Contexts/CartContext';
 
+
+//Component for displaying product information and handling user interactions
 const Product = ({ product }) => {
+      
       const { addToCart } = useContext(CartContext);
       
-      const { id, image, category, title, price } = product;
+      // Destructure product object for easy access to properties
+      const { id, image, title, price } = product;
+      
       return (
             <div>
                   <div className='border border-[#e4e4e4] h-[300px] mb-4-coolSlate relative overflow-hidden group transition bg-white'>
@@ -21,6 +26,7 @@ const Product = ({ product }) => {
                               </div>
                         </div>
                         
+                        {/* Show button to add item to cart and link to product details */}
                         <div className='absolute top-2 -right-11 group-hover:right-2 p-2 flex flex-col items-center justify-center gap-y-2 opacity-6 group-hover:opacity-100 transition-all duration-300'>
                               <button onClick={() => addToCart(product, id)}>
                                     <div className='border border-purple flex justify-center items-center text-white w-8 h-8 bg-orange/75'>
@@ -36,6 +42,7 @@ const Product = ({ product }) => {
                         </div>
                   </div>
                   
+                  {/* Display product information and link to product details */}
                   <div className='bg-coolSlate'>
                         <Link to={`/product/${id}`}>
                               <h2 className='font-semibold mb-1 font-fontThree bg-coolSlate'>{title}</h2>

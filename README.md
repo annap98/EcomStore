@@ -1,70 +1,49 @@
 # Mock Ecommerce Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple e-commerce web application built with React and Tailwind CSS. It allows users to browse and purchase clothing items, and includes features such as product details pages and a shopping cart.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started, clone this repository to your local machine, navigate to the project directory and run the following command to install the required dependencies:
 
-### `npm start`
+```npm install```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Then, start the app with:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```npm start```
 
-### `npm test`
+## App Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The App consists of several pages, components and contexts. The pages are contained in the `src/Pages` folder and include:
 
-### `npm run build`
+- `Home`: This is the homepage of the app where users can browse featured products.
+- `ProductDetails`: This page displays more detailed information about a specific product when the user clicks on it.
+- `AllClothing`: This page displays all clothing items available for purchase.
+- `AboutUs`: This page provides information about the company and its mission.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The components are contained in the src/Components folder and include:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `NavBar`: This component displays the navigation menu and logo of the App.
+- `Sidebar`: This component displays a sidebar menu that allows users to filter products by categories.
+- `Footer`: This component displays the footer of the App.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The contexts are contained in the src/Contexts folder and include:
 
-### `npm run eject`
+- `ProductContext`: This context provides all product data to the App.
+- `CartContext`: This context provides the shopping cart functionality.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The page will reload when you make changes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This App uses the following major dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `React`: A JavaScript library for building user interfaces.
+- `React-Router-Dom`: A collection of navigational components that compose declaratively with your application.
+- `tailwindcss`: A utility-first CSS framework for rapid UI development.
+- `axios`: A promise-based HTTP client for the browser and node.js.
+- `Google Fonts`: A popular icon set and toolkit.
+- `react-icons`: A collection of popular icons and logos.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### License
+This project is licensed under the MIT license.

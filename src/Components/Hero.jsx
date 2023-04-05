@@ -2,18 +2,13 @@ import React from 'react';
 import Sweater from '../Assets/sweater.png';
 import Clouds from '../Assets/clouds.png'
 
-
+// Hero Component - Front Page
 const Hero = () => {
       return (
-
             <section className='h-[800px] bg-cover bg-center py-24 bg-coolSlate backdrop backdrop-blur-xl w-full'
-                  style={{ backgroundImage: `url(${Clouds})` }}
+                  style={{ backgroundImage: `url(${Clouds})` }}>
 
-            >
-
-                  <div className='container mx-auto flex justify-around h-full w-full'
-
-                  >
+                  <div className='container mx-auto flex justify-around h-full w-full'>
 
                         <div className='flex flex-col justify-center backdrop-filter backdrop-blur-xl'>
 
